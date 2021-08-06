@@ -3,7 +3,6 @@
 ##ADD:
 ##464/tcp  open  kpasswd5
 #53/tcp   open  domain
-#shopt -s nocasematch (case insensitive)
 
 if [ -z "$1" ]
 then
