@@ -47,8 +47,8 @@ sublist3r -d $1 >> domresult
 printf "\n\n------ SUBDOM. dnsrecon ------\n\n" >> domresult
 echo -e "\nRunning DNSrecon full..."
 #dnsrecon -d $1 -D /usr/share/wordlists/dnsmap.txt --threads 250 -t axfr,crt,brt,std >> domresult
-dnsrecon -d intelligence.htb -D /usr/share/wordlists/dnsmap.txt -t axfr >> domresult
-dnsrecon -d intelligence.htb -D /usr/share/wordlists/dnsmap.txt -t crt >> domresult
+dnsrecon -d $1 -D /usr/share/wordlists/dnsmap.txt -t axfr >> domresult
+dnsrecon -d $1 -D /usr/share/wordlists/dnsmap.txt -t crt >> domresult
 
 printf "\n\n------ SUBDOM. BRUTE Gobuster ------\n\n" >> domresult
 echo -e "\nRunning Gobuster recon..."
