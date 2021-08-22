@@ -20,7 +20,7 @@ nmap -p- -sS --min-rate 5000 $1 -n -Pn | tail -n +6 | head -n -1 >> results
 
 ###ToOptimize
 #ports=$(cat results | awk '{print $1}' | sed 's/\/tcp/,/g' | tr -d "\n" | sed '$ s/.$//' | sed 's/------PORT//g' | sed 's/,Nma//g' | sed 's/------Some//g' | sed 's/PORT//g' | sed 's/,Servic//g'  | sed 's/------//g')
-ports=$(cat results | awk '{print $1}' | sed 's/\/tcp/,/g' | tr -d "\n" | sed '$ s/.$//' | sed 's/,1SF.*")//g' | sed 's/------PORT//g' | sed 's/,Nma//g' | sed 's/------Some//g' | sed 's/PORT//g' | sed 's/,Servic//g'  | sed 's/------//g')
+ports=$(cat results | awk '{print $1}' | sed 's/\/tcp/,/g' | tr -d "\n" | sed '$ s/.$//' | sed 's/,1SF.*")//g' | sed 's/------PORT//g' | sed 's/,Nma//g' | sed 's/------Some//g' | sed 's/PORT//g' | sed 's/,Servic//g' | sed 's/------//g' | sed 's/HostNot//g')
 echo $ports
 
 cat results
