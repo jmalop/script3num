@@ -192,7 +192,7 @@ cat results
 
 echo -e "\n\nRunning Nmap UDP...\n"
 #nmap -n --top-ports 2000 --reason --min-rate 3000 -sU $1 | tail -n +6 >> temp3
-nmap -sU -p- --open --max-rtt-timeout 10 --max-scan-delay 2 --min-hostgroup 10 &1 -n -Pn >> temp3
+nmap -sU -p- --max-rtt-timeout 10 --max-scan-delay 2 --min-hostgroup 10 &1 -n -Pn >> temp3
 
 #sudo nmap -sU -p- --open -sV --version-intensity 1 $1 -n -Pn
 #sudo nmap -sU -p- --open $1 -n -Pn
