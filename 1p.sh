@@ -191,13 +191,11 @@ fi
 cat results
 
 echo -e "\n\nRunning Nmap UDP...\n"
-#nmap -n --top-ports 2000 --reason --min-rate 3000 -sU $1 | tail -n +6 >> temp3
+#nmap -n -p- -sU --open --reason --min-rate 4000 $1 | tail -n +6 | head -n -1 >> temp3
 nmap -sU --top-ports 15000 --max-rtt-timeout 10 --max-scan-delay 2 --min-hostgroup 10 --reason --min-rate 5000 10.10.11.100 -n  | tail -n +6 | head -n -1 >> temp3
 
 #sudo nmap -sU -p- --open -sV --version-intensity 1 $1 -n -Pn
-#sudo nmap -sU -p- --open $1 -n -Pn
-#nmap -n --top-ports 5000 --reason --min-rate 3000 -sU --open $1 | tail -n +6 >> temp3
-#nmap -n --top-ports 15000 -sU --open --reason --min-rate 4000 $1 | tail -n +6 | head -n -1 >> temp3
+
 printf "\n\n------ UDP ------\n\n" >> results
 
 cat temp3
