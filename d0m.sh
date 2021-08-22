@@ -4,7 +4,7 @@
 
 if [ -z "$1" ]
 then
-        echo -e "\nUsage: ./dnsrecon.sh <DOMAIN.XXX>"
+        echo -e "\nUsage: ./d0m.sh <DOMAIN.XXX>"
         exit 1
 fi
 
