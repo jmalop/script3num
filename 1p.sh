@@ -6,7 +6,7 @@
 
 if [ -z "$1" ]
 then
-        echo -e "\nUsage: ./medrecon.sh <IP>"
+        echo -e "\nUsage: ./1p.sh <IP>"
         exit 1
 fi
 
