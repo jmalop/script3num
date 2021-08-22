@@ -106,7 +106,7 @@ do
                 #gobuster dir -u $1 -t 100 -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -x txt,php,html,htm,aspx -qz > temp1
                 #gobuster dir -u http://$1:$portww/ -r -k -t 100 -w /usr/share/wordlists/dirbuster/directory-list-2.3-small.txt -x txt,php,html,aspx --wildcard >> temp1
                 
-                #wfuzz -t 200 --hc 404 -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt http://$1:$portww/ >> temp1
+                #wfuzz -t 200 --hc 404 -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt http://$1:$portww/FUZZ/ >> temp1
 
                 gobuster dir -u http://$1:$portww/ -r -k -t 70 -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -x txt,php,html,asp --wildcard --timeout 20s >> temp1
                 #gobuster dir -u http://$1:$portww/ -k -t 100 -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -x txt,php,html,asp --wildcard >> temp1
