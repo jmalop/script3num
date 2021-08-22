@@ -1,6 +1,6 @@
 #!/bin/bash
 
-##ADD:
+##ADD: (use nmap or masscan?)
 ##464/tcp  open  kpasswd5
 #53/tcp   open  domain
 
