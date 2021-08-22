@@ -109,6 +109,7 @@ do
                 #wfuzz -t 200 --hc 404 -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt http://$1:$portww/ >> temp1
 
                 gobuster dir -u http://$1:$portww/ -r -k -t 100 -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -x txt,php,html,asp --wildcard >> temp1
+                #gobuster dir -u http://$1:$portww/ -k -t 100 -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -x txt,php,html,asp --wildcard >> temp1
 
                 echo -e "\nRunning WhatWeb port: $portww ..."
                 #echo $line
